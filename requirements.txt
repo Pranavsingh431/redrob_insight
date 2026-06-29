@@ -1,7 +1,10 @@
-# Core ranking dependencies (rank.py — NO network during inference)
+# ─── Streamlit Cloud / demo dependencies ───
+# Streamlit Cloud auto-installs from THIS file. Must include ALL deps
+# needed by both rank.py and streamlit_demo.py.
+streamlit>=1.35.0
 sentence-transformers>=2.7.0
 numpy>=1.26.0
 tqdm>=4.66.0
-
-# Optional: faster JSON parsing (install if available)
-# orjson>=3.9.0
+pandas>=2.0.0
+requests>=2.31.0
+python-dotenv>=1.0.0

@@ -5,7 +5,6 @@ import random
 import urllib.parse
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 import requests
 from dotenv import load_dotenv
 
@@ -15,168 +14,238 @@ OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 DEFAULT_MODEL = "google/gemini-2.5-flash"
 
-st.set_page_config(page_title="Redrob Insight", page_icon="⚡", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Redrob Insight", page_icon=None, layout="wide", initial_sidebar_state="expanded")
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Premium Custom CSS
+# Design system — clean recruiter-grade SaaS dark theme
+# Single accent (blue). No gradients, no glows, no decorative emojis.
 # ─────────────────────────────────────────────────────────────────────────────
 def apply_custom_css():
     st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
     html, body, [class*="css"] {
         font-family: 'Inter', sans-serif;
     }
-    
+
     .stApp {
         background-color: #0d1117;
-        color: #c9d1d9;
-    }
-    
-    .gradient-text {
-        background: linear-gradient(90deg, #ff4b4b, #ff8f00);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-        font-size: 2.8rem;
-        margin-bottom: 0.2rem;
-    }
-    
-    .premium-card {
-        background: rgba(22, 27, 34, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    
-    .highlight-card {
-        background: linear-gradient(135deg, rgba(255,75,75,0.05) 0%, rgba(255,143,0,0.05) 100%);
-        border: 1px solid rgba(255, 75, 75, 0.4);
-        box-shadow: 0 0 20px rgba(255, 75, 75, 0.15);
-    }
-    
-    div[data-testid="stMetricValue"] {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: #58a6ff;
-    }
-    div[data-testid="stMetricLabel"] {
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: #8b949e;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    
-    .skill-tag {
-        display: inline-block;
-        background: rgba(88, 166, 255, 0.1);
-        color: #58a6ff;
-        border: 1px solid rgba(88, 166, 255, 0.2);
-        border-radius: 20px;
-        padding: 4px 12px;
-        font-size: 0.85rem;
-        font-weight: 500;
-        margin: 4px 4px 4px 0;
-    }
-    
-    .evidence-item {
         color: #e6edf3;
-        font-size: 0.95rem;
-        margin-bottom: 6px;
-    }
-    .evidence-item::before {
-        content: '✓';
-        color: #238636;
-        font-weight: bold;
-        margin-right: 8px;
     }
 
+    /* ── Typography ── */
+    .app-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #e6edf3;
+        margin: 0;
+        letter-spacing: -0.02em;
+    }
+    .app-subtitle {
+        font-size: 0.95rem;
+        color: #8b949e;
+        margin: 0.25rem 0 0 0;
+    }
+    .section-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #8b949e;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.75rem;
+    }
+    .card-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #8b949e;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.75rem;
+    }
+
+    /* ── Surfaces ── */
+    .card {
+        background: #161b22;
+        border: 1px solid #21262d;
+        border-radius: 8px;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    /* ── Score bars (horizontal, label + track + value) ── */
+    .score-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.6rem;
+        font-size: 0.85rem;
+    }
+    .score-label {
+        flex: 0 0 42%;
+        color: #c9d1d9;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .score-track {
+        flex: 1;
+        height: 6px;
+        background: #21262d;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .score-fill {
+        height: 100%;
+        border-radius: 3px;
+        transition: width 0.4s ease;
+    }
+    .score-value {
+        flex: 0 0 3rem;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
+        color: #e6edf3;
+    }
+
+    /* ── Skill tags ── */
+    .skill-tag {
+        display: inline-block;
+        background: #21262d;
+        color: #c9d1d9;
+        border: 1px solid #30363d;
+        border-radius: 4px;
+        padding: 3px 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin: 0 4px 4px 0;
+        line-height: 1.4;
+    }
+
+    /* ── Career timeline ── */
     .timeline-item {
         border-left: 2px solid #30363d;
-        padding-left: 20px;
+        padding-left: 1rem;
+        margin-bottom: 1.25rem;
         position: relative;
-        margin-bottom: 24px;
     }
     .timeline-item::before {
         content: '';
         position: absolute;
-        width: 12px;
-        height: 12px;
-        background: #30363d;
+        left: -5px;
+        top: 4px;
+        width: 8px;
+        height: 8px;
+        background: #58a6ff;
         border-radius: 50%;
-        left: -7px;
-        top: 6px;
     }
-    
     .job-title {
         color: #e6edf3;
         font-weight: 600;
-        font-size: 1.1rem;
-        margin-bottom: 4px;
-    }
-    .company-name {
-        color: #58a6ff;
-        font-weight: 500;
         font-size: 0.95rem;
     }
-    .job-dates {
+    .job-meta {
+        color: #8b949e;
+        font-size: 0.82rem;
+        margin-top: 2px;
+    }
+
+    /* ── Evidence / bullets ── */
+    .bullet-fail {
         color: #8b949e;
         font-size: 0.85rem;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
+        line-height: 1.4;
     }
-    
-    .stButton>button {
-        width: 100%;
-        border-radius: 8px;
-        font-weight: 600;
-        transition: all 0.2s;
+    .bullet-pass {
+        color: #e6edf3;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        line-height: 1.4;
     }
-    
-    /* Mailto buttons styling mimicking st.button */
-    .mailto-btn {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem 1rem;
-        background-color: transparent;
-        color: #c9d1d9;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 400;
-        font-size: 16px;
-        transition: all 0.2s;
+
+    /* ── Metrics ── */
+    div[data-testid="stMetricValue"] {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #e6edf3;
     }
-    .mailto-btn:hover {
-        border-color: #ff4b4b;
-        color: #ff4b4b;
+    div[data-testid="stMetricLabel"] {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #8b949e;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
     }
-    .mailto-btn-primary {
-        background-color: #ff4b4b;
-        color: #ffffff;
-        border: 1px solid #ff4b4b;
-    }
-    .mailto-btn-primary:hover {
-        background-color: #ff3333;
-        color: #ffffff;
-    }
-    
+
+    /* ── Sidebar ── */
     section[data-testid="stSidebar"] {
-        background-color: #090c10;
-        border-right: 1px solid #30363d;
+        background-color: #010409;
+        border-right: 1px solid #21262d;
     }
-    
+
+    /* ── Buttons ── */
+    .stButton > button {
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 0.85rem;
+        border: 1px solid #30363d;
+        background: #21262d;
+        color: #e6edf3;
+    }
+    .stButton > button:hover {
+        border-color: #58a6ff;
+        color: #58a6ff;
+    }
+
+    /* ── Action links (mailto) ── */
+    .action-link {
+        display: block;
+        text-align: center;
+        padding: 0.45rem 0.5rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 6px;
+        border: 1px solid #30363d;
+        background: #21262d;
+        color: #e6edf3;
+        transition: border-color 0.15s, color 0.15s;
+    }
+    .action-link:hover {
+        border-color: #58a6ff;
+        color: #58a6ff;
+    }
+    .action-link-primary {
+        background: #1f6feb;
+        border-color: #1f6feb;
+        color: #ffffff;
+    }
+    .action-link-primary:hover {
+        background: #388bfd;
+        border-color: #388bfd;
+        color: #ffffff;
+    }
+
+    /* ── Chat ── */
     .stChatMessage {
-        background-color: rgba(22, 27, 34, 0.8);
-        border-radius: 12px;
-        padding: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background-color: #161b22;
+        border: 1px solid #21262d;
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+    }
+
+    /* ── Rank delta badge ── */
+    .delta-badge {
+        display: inline-block;
+        background: rgba(63, 185, 80, 0.12);
+        color: #3fb950;
+        border: 1px solid rgba(63, 185, 80, 0.3);
+        border-radius: 4px;
+        padding: 2px 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -328,46 +397,46 @@ def generate_ats_rank(actual_rank, title):
 
 def ask_openrouter(messages, model=DEFAULT_MODEL):
     if not OPENROUTER_API_KEY:
-        return "⚠️ **Error:** OPENROUTER_API_KEY not found in `.env` file."
-    
+        return "**Error:** OPENROUTER_API_KEY not configured. Set it in Streamlit Cloud secrets."
+
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "HTTP-Referer": "https://redrob.io", 
+        "HTTP-Referer": "https://redrob.io",
         "X-Title": "India Runs Hackathon",
     }
-    
+
     payload = {
         "model": model,
         "messages": messages,
         "temperature": 0.2
     }
-    
+
     try:
         response = requests.post(OPENROUTER_URL, headers=headers, json=payload)
         response.raise_for_status()
         data = response.json()
         return data["choices"][0]["message"]["content"]
     except Exception as e:
-        return f"⚠️ **Error contacting AI:** {str(e)}"
+        return f"**Error contacting AI:** {str(e)}"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Interactive Interview Page
 # ─────────────────────────────────────────────────────────────────────────────
 
 def render_interview_page(cid, c_data):
-    st.markdown('<div class="gradient-text">Redrob AI Mock Interviewer</div>', unsafe_allow_html=True)
-    st.markdown(f"Conducting a technical screening for **{cid}** based on their exact profile.")
-    
-    if st.button("🔙 Back to Dashboard"):
+    st.markdown('<div class="app-title">Mock Interview</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="app-subtitle">Technical screening for {cid} &mdash; questions derived from their exact profile.</div>', unsafe_allow_html=True)
+
+    if st.button("Back to dashboard", key="back_intv"):
         st.session_state.interview_mode_cand = None
         st.rerun()
-        
+
     st.markdown("---")
-    
+
     session_key = f"interview_messages_{cid}"
     if session_key not in st.session_state:
         st.session_state[session_key] = [
-            {"role": "assistant", "content": "Hello! I am the Redrob AI Interviewer. I have reviewed your profile and experience. Are you ready to begin the technical screening?"}
+            {"role": "assistant", "content": "I'm the Redrob AI interviewer. I've reviewed this candidate's profile and experience. Ready to begin the technical screening?"}
         ]
 
     chat_container = st.container(height=500)
@@ -376,9 +445,9 @@ def render_interview_page(cid, c_data):
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
 
-    if prompt := st.chat_input("Type your response to the interviewer..."):
+    if prompt := st.chat_input("Type the candidate's response..."):
         st.session_state[session_key].append({"role": "user", "content": prompt})
-        
+
         with chat_container:
             with st.chat_message("user"):
                 st.markdown(prompt)
@@ -395,9 +464,9 @@ Guidelines:
 3. Keep the tone professional, inquisitive, and deep technically.
 """
         api_messages = [{"role": "system", "content": system_prompt}]
-        for msg in st.session_state[session_key][-8:]: 
+        for msg in st.session_state[session_key][-8:]:
             api_messages.append({"role": msg["role"], "content": msg["content"]})
-            
+
         response = ask_openrouter(api_messages)
         st.session_state[session_key].append({"role": "assistant", "content": response})
         st.rerun()
@@ -425,59 +494,89 @@ def render_comparison_view(df_sub, candidates_data, scores_sidecar, cand1_str, c
     metrics1, entry1 = get_real_metrics(c1_data, score1, cid1, scores_sidecar)
     metrics2, entry2 = get_real_metrics(c2_data, score2, cid2, scores_sidecar)
 
-    st.markdown("## ⚖️ Candidate Head-to-Head Comparison")
-    st.markdown("Compare top candidates across the 6 scoring dimensions of the Redrob AI Architecture (real pipeline sub-scores).")
+    st.markdown('<div class="app-title">Candidate comparison</div>', unsafe_allow_html=True)
+    st.markdown('<div class="app-subtitle">Side-by-side across the 6 pipeline dimensions (real sub-scores).</div>', unsafe_allow_html=True)
+    st.markdown("<div style='height:1rem;'></div>", unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
 
     def render_cand_card(col, cid, rank, c_data, metrics, entry):
         with col:
-            st.markdown(f'<div class="premium-card">', unsafe_allow_html=True)
+            st.markdown('<div class="card">', unsafe_allow_html=True)
             title = c_data.get("profile", {}).get("current_title", "Unknown Role")
-            st.markdown(f"### {cid}")
-            st.markdown(f"**Rank:** #{rank} | **Role:** {title}")
+            years = c_data.get("profile", {}).get("years_of_experience", 0)
+            company = c_data.get("profile", {}).get("current_company", "")
+            st.markdown(f"**{cid}** &middot; Rank #{rank}")
+            st.markdown(f"<div style='color:#e6edf3; font-size:1.05rem; font-weight:600; margin:0.25rem 0;'>{title}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='color:#8b949e; font-size:0.85rem; margin-bottom:0.75rem;'>{years:.1f} yr exp &middot; {company}</div>", unsafe_allow_html=True)
+
             if entry:
                 hp = entry.get("honeypot_mult", 1.0)
                 if hp < 1.0:
-                    st.markdown(f"**Honeypot multiplier:** `{hp}`")
+                    st.markdown(f"<div style='color:#f85149; font-size:0.8rem; margin-bottom:0.5rem;'>Honeypot multiplier: {hp}</div>", unsafe_allow_html=True)
                 vskills = entry.get("verified_skills", [])
                 if vskills:
-                    st.markdown(f"**Career-verified:** {', '.join(vskills[:5])}")
-            st.markdown("---")
-            for k, v in metrics.items():
-                st.markdown(f"**{k}**: {v}%")
+                    st.markdown(f"<div style='color:#8b949e; font-size:0.8rem; margin-bottom:0.5rem;'>Career-verified: {', '.join(vskills[:5])}</div>", unsafe_allow_html=True)
 
-            st.markdown("---")
-            st.markdown("**Top Skills:**")
+            st.markdown(_render_score_bars_html(metrics), unsafe_allow_html=True)
+
             skills = c_data.get("skills", [])
             if skills:
-                tags_html = ""
-                for s in skills[:5]:
-                    name = s.get("name", "")
-                    if name:
-                        tags_html += f'<span class="skill-tag">{name}</span>'
-                st.markdown(tags_html, unsafe_allow_html=True)
-            st.markdown("</div>", unsafe_allow_html=True)
+                tags_html = "".join(
+                    f'<span class="skill-tag">{s.get("name","")}</span>'
+                    for s in skills[:5] if s.get("name")
+                )
+                st.markdown(f"<div style='margin-top:0.75rem;'>{tags_html}</div>", unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
 
     render_cand_card(col1, cid1, rank1, c1_data, metrics1, entry1)
     render_cand_card(col2, cid2, rank2, c2_data, metrics2, entry2)
 
-    st.markdown("### 🤖 AI Recommendation")
-    # Compare on the weighted composite (which is what actually drives the rank).
+    # Recommendation based on weighted composite
     def weighted(m):
         order = ["semantic", "skills", "career", "behavioral", "location", "education"]
         vals = list(m.values())
         return sum(ARCH_WEIGHTS[k] * (v / 100.0) for k, v in zip(order, vals))
     w1, w2 = weighted(metrics1), weighted(metrics2)
+    st.markdown("---")
+    st.markdown('<div class="section-label">Recommendation</div>')
     if w1 >= w2:
-        st.success(f"**⭐ Recommended: {cid1}** (Rank #{rank1}) — higher weighted composite ({w1:.3f} vs {w2:.3f}).")
+        st.info(f"**{cid1}** (Rank #{rank1}) has the higher weighted composite ({w1:.3f} vs {w2:.3f}).")
     else:
-        st.success(f"**⭐ Recommended: {cid2}** (Rank #{rank2}) — higher weighted composite ({w2:.3f} vs {w1:.3f}).")
+        st.info(f"**{cid2}** (Rank #{rank2}) has the higher weighted composite ({w2:.3f} vs {w1:.3f}).")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Main Profile Dashboard UI
 # ─────────────────────────────────────────────────────────────────────────────
+
+def _score_bar_color(val):
+    """Return fill color for a score value 0-100."""
+    if val >= 70:
+        return "#3fb950"  # green
+    if val >= 40:
+        return "#58a6ff"  # blue
+    return "#6e7681"      # muted
+
+
+def _render_score_bars_html(metrics):
+    """Render horizontal score bars: label | track+fill | value%.
+
+    Cleaner and more readable than a radar chart for 6 dimensions — each bar
+    shows the exact sub-score and its weight at a glance.
+    """
+    rows = []
+    for name, val in metrics.items():
+        color = _score_bar_color(val)
+        rows.append(
+            f'<div class="score-row">'
+            f'  <div class="score-label">{name}</div>'
+            f'  <div class="score-track"><div class="score-fill" style="width:{val}%; background:{color};"></div></div>'
+            f'  <div class="score-value">{val}</div>'
+            f'</div>'
+        )
+    return "".join(rows)
+
 
 def _build_ats_failure_reasons(c_data, title, skills, history, metric_vals):
     """Generate a DYNAMIC, profile-grounded explanation of why a traditional
@@ -569,134 +668,110 @@ def render_dashboard(df_sub, candidates_data, scores_sidecar, selected_cand_str)
     # ── Sidebar Actions ──
     with st.sidebar:
         st.markdown("---")
-        st.markdown("### 🚀 Recruiter Actions")
+        st.markdown('<div class="section-label">Recruiter Actions</div>')
         candidate_email = profile.get("email", f"{selected_cid.lower()}@example.com")
-        
+
         shortlist_subject = urllib.parse.quote("Update on your application at Redrob")
         shortlist_body = urllib.parse.quote(f"Hi,\n\nWe have reviewed your profile for the {title} role and are impressed by your background. We would love to move you forward to the next round.\n\nBest,\nRedrob Recruitment Team")
-        
+
         reject_subject = urllib.parse.quote("Your application at Redrob")
         reject_body = urllib.parse.quote(f"Hi,\n\nThank you for applying. After careful consideration, we have decided to move forward with other candidates who more closely match our requirements at this time.\n\nBest,\nRedrob Recruitment Team")
-        
+
         message_subject = urllib.parse.quote(f"Opportunity at Redrob for {title}")
         message_body = urllib.parse.quote(f"Hi,\n\nI came across your profile and think you'd be a great fit for an open role on our team. Let me know if you're open to a quick chat.\n\nBest,\nRedrob Recruitment Team")
 
-        col_btn1, col_btn2 = st.columns(2)
-        with col_btn1:
-            st.markdown(f'<a href="mailto:{candidate_email}?subject={shortlist_subject}&body={shortlist_body}" class="mailto-btn mailto-btn-primary">✅ Shortlist</a>', unsafe_allow_html=True)
-            st.markdown("<div style='height:8px;'></div>", unsafe_allow_html=True)
-            st.markdown(f'<a href="mailto:{candidate_email}?subject={message_subject}&body={message_body}" class="mailto-btn">✉️ Message</a>', unsafe_allow_html=True)
-        with col_btn2:
-            if st.button("📅 Interview", use_container_width=True):
-                st.session_state.interview_mode_cand = selected_cid
-                st.rerun()
-            st.markdown(f'<a href="mailto:{candidate_email}?subject={reject_subject}&body={reject_body}" class="mailto-btn">❌ Reject</a>', unsafe_allow_html=True)
+        st.markdown(f'<a href="mailto:{candidate_email}?subject={shortlist_subject}&body={shortlist_body}" class="action-link action-link-primary">Shortlist</a>', unsafe_allow_html=True)
+        if st.button("Start interview", use_container_width=True, key=f"intv_{selected_cid}"):
+            st.session_state.interview_mode_cand = selected_cid
+            st.rerun()
+        st.markdown(f'<a href="mailto:{candidate_email}?subject={message_subject}&body={message_body}" class="action-link">Message</a>', unsafe_allow_html=True)
+        st.markdown(f'<a href="mailto:{candidate_email}?subject={reject_subject}&body={reject_body}" class="action-link">Reject</a>', unsafe_allow_html=True)
         
     # ── Build a DYNAMIC, profile-grounded "Why ATS failed vs Redrob promoted" ──
     ats_fail_bullets = _build_ats_failure_reasons(c_data, title, skills, history, metric_vals)
 
     # ── Explainability Header: The "Why" ──
-    with st.container():
-        st.markdown('<div class="premium-card highlight-card">', unsafe_allow_html=True)
-        colA, colB = st.columns([1, 2])
+    st.markdown('<div class="section-label">Explainability</div>')
+    colA, colB = st.columns([1, 2])
 
-        with colA:
-            st.markdown(f"## 💎 The \"Why\"")
-            m1, m2 = st.columns(2)
-            m1.metric("Traditional ATS Rank", f"#{ats_rank}")
-            m2.metric("Redrob AI Rank", f"#{selected_rank}", delta=f"↑ {ats_rank - selected_rank} positions")
+    with colA:
+        st.metric("Traditional ATS rank", f"#{ats_rank}")
+        st.metric("Redrob AI rank", f"#{selected_rank}", delta=f"+{ats_rank - selected_rank} promoted")
 
-        with colB:
-            fail_html = "".join(
-                f'<div style="font-size:0.9rem; color:#8b949e;">• {b}</div>' for b in ats_fail_bullets
-            )
-            promoted_rows = "".join(
-                f'<div class="evidence-item">{name}: <strong>{val}%</strong></div>'
-                for name, val in metrics.items()
-            )
-            st.markdown(f"""
-            **Why ATS Failed vs Why Redrob Promoted:**
-
-            <div style="display:flex; justify-content:space-between;">
-                <div style="flex:1; border-right: 1px solid rgba(255,255,255,0.1); padding-right:15px;">
-                    <div style="color: #ff4b4b; font-weight:600; margin-bottom:5px;">❌ Traditional ATS Failed</div>
-                    {fail_html}
-                </div>
-                <div style="flex:1; padding-left:15px;">
-                    <div style="color: #238636; font-weight:600; margin-bottom:5px;">✅ Redrob AI Promoted</div>
-                    {promoted_rows}
-                </div>
+    with colB:
+        fail_html = "".join(
+            f'<div class="bullet-fail">&bull; {b}</div>' for b in ats_fail_bullets
+        )
+        score_bars_html = _render_score_bars_html(metrics)
+        st.markdown(f"""
+        <div style="display:flex; gap:1.5rem;">
+            <div style="flex:1;">
+                <div style="color:#f85149; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">Why keyword ATS failed</div>
+                {fail_html}
             </div>
-            """, unsafe_allow_html=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+            <div style="flex:1;">
+                <div style="color:#3fb950; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">Why Redrob promoted</div>
+                {score_bars_html}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    st.markdown("<div style='height:0.5rem;'></div>", unsafe_allow_html=True)
 
-    # ── Main 3-Column Layout ──
-    col_left, col_mid, col_right = st.columns([1.2, 1.2, 1.4], gap="large")
+    # ── Main 2-column layout ──
+    col_left, col_right = st.columns([1, 1], gap="large")
 
     with col_left:
-        st.markdown("### 💼 Career Timeline")
-        st.markdown('<div class="premium-card">', unsafe_allow_html=True)
-        
+        # Career timeline
+        st.markdown('<div class="card-title">Career timeline</div>')
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+
         if not history:
             st.write("No career history available.")
-        
+
         history_sorted = sorted(history, key=lambda x: x.get('start_date', '1900'), reverse=True)
-        
+
         for job in history_sorted[:5]:
+            dates = f"{job.get('start_date', '')[:7]} &rarr; {job.get('end_date', 'Present')[:7] if job.get('end_date') else 'Present'}"
             st.markdown(f"""
             <div class="timeline-item">
                 <div class="job-title">{job.get('title', 'Role')}</div>
-                <div class="company-name">{job.get('company', 'Company')}</div>
-                <div class="job-dates">{job.get('start_date', '')} to {job.get('end_date', 'Present')} • {job.get('location', '')}</div>
+                <div class="job-meta">{job.get('company', 'Company')} &middot; {dates}</div>
             </div>
             """, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
-    with col_mid:
-        st.markdown("### 🛠 Pipeline Analysis")
-        st.markdown('<div class="premium-card">', unsafe_allow_html=True)
-        
-        st.markdown("**Core Dimensions (Architecture)**")
-        categories = ['Semantic', 'Skills', 'Career', 'Behavioral', 'Location', 'Education']
-        values = [v / 20.0 for v in metric_vals]
+        # Score breakdown bars
+        st.markdown('<div class="card-title">Score breakdown</div>')
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        st.markdown(_render_score_bars_html(metrics), unsafe_allow_html=True)
+        if score_entry:
+            hp = score_entry.get("honeypot_mult", 1.0)
+            if hp < 1.0:
+                st.markdown(f"<div style='color:#f85149; font-size:0.8rem; margin-top:0.5rem;'>Honeypot multiplier: {hp}</div>", unsafe_allow_html=True)
+            vskills = score_entry.get("verified_skills", [])
+            if vskills:
+                st.markdown(f"<div style='color:#8b949e; font-size:0.8rem; margin-top:0.5rem;'>Career-verified: {', '.join(vskills[:5])}</div>", unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
 
-        fig = px.line_polar(
-            r=values,
-            theta=categories,
-            line_close=True,
-            template="plotly_dark",
-            height=250
-        )
-        fig.update_traces(fill='toself', line_color='#ff4b4b', fillcolor='rgba(255, 75, 75, 0.3)')
-        fig.update_layout(
-            polar=dict(
-                radialaxis=dict(visible=False, range=[0, 5]),
-                bgcolor='rgba(0,0,0,0)'
-            ),
-            paper_bgcolor='rgba(0,0,0,0)',
-            margin=dict(l=20, r=20, t=20, b=20)
-        )
-        st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
-        
-        st.markdown("---")
+        # Skills
+        st.markdown('<div class="card-title">Declared skills</div>')
+        st.markdown('<div class="card">', unsafe_allow_html=True)
         if skills:
-            tags_html = ""
-            for s in skills[:15]:
-                name = s.get("name", "")
-                if name:
-                    tags_html += f'<span class="skill-tag">{name}</span>'
+            tags_html = "".join(
+                f'<span class="skill-tag">{s.get("name", "")}</span>'
+                for s in skills[:15] if s.get("name")
+            )
             st.markdown(tags_html, unsafe_allow_html=True)
         else:
             st.write("No skills explicitly listed.")
-        
         st.markdown('</div>', unsafe_allow_html=True)
 
     with col_right:
-        st.markdown("### 💬 Recruiter Co-pilot")
-        st.markdown('<div class="premium-card" style="padding-bottom: 5px;">', unsafe_allow_html=True)
-        
+        st.markdown('<div class="card-title">Recruiter co-pilot</div>')
+        st.markdown('<div class="card" style="padding-bottom:0.5rem;">', unsafe_allow_html=True)
+
         session_key = f"messages_{selected_cid}"
-        
+
         # Pre-fill proactive AI summary if new session
         if session_key not in st.session_state:
             initial_prompt = f"""
@@ -704,51 +779,53 @@ You are the Redrob Recruiter Co-pilot. Summarize the candidate {selected_cid} br
 Output EXACTLY this format:
 
 **Strengths:**
-✓ [Point 1 based on resume]
-✓ [Point 2 based on resume]
+- [Point 1 based on resume]
+- [Point 2 based on resume]
 
-**Weaknesses:**
-• [Point 1 based on resume]
+**Concerns:**
+- [Point 1 based on resume]
 
-**Recommendation:** 
+**Recommendation:**
 [One sentence recommendation]
 
 Here is the JSON: {json.dumps(c_data)}
 """
             if OPENROUTER_API_KEY:
-                with st.spinner("AI generating default analysis..."):
+                with st.spinner("Generating analysis..."):
                     initial_resp = ask_openrouter([{"role": "system", "content": initial_prompt}])
             else:
-                initial_resp = "**Strengths:**\n✓ Strong semantic fit\n✓ Verified skills\n\n**Recommendation:** Proceed to interview.\n\n*(Add API key for full AI generation)*"
-            
+                initial_resp = ("**Strengths:**\n- Strong semantic fit\n- Verified skills\n\n"
+                                "**Recommendation:** Proceed to interview.\n\n"
+                                "*(Set OPENROUTER_API_KEY in Streamlit secrets for full AI generation)*")
+
             st.session_state[session_key] = [
                 {"role": "assistant", "content": initial_resp}
             ]
 
-        st.markdown("<div style='font-size: 0.85rem; color:#8b949e; margin-bottom: 5px;'>Quick Actions:</div>", unsafe_allow_html=True)
+        # Quick-action chips
         chip1, chip2, chip3 = st.columns(3)
         prompt_trigger = None
-        
-        if chip1.button("Why Ranked High?", key="chip1"):
+
+        if chip1.button("Why ranked high", key="chip1", use_container_width=True):
             prompt_trigger = "Why is this candidate ranked so high? Explain their strengths."
-        if chip2.button("Gen Interview", key="chip2"):
+        if chip2.button("Interview Qs", key="chip2", use_container_width=True):
             prompt_trigger = "Generate 3 highly technical interview questions tailored exactly to their past experience."
-        if chip3.button("Risk Analysis", key="chip3"):
+        if chip3.button("Risk analysis", key="chip3", use_container_width=True):
             prompt_trigger = "What are the biggest risk factors or missing skills for this candidate?"
 
-        chat_container = st.container(height=380)
-        
+        chat_container = st.container(height=420)
+
         with chat_container:
             for message in st.session_state[session_key]:
                 with st.chat_message(message["role"]):
                     st.markdown(message["content"])
 
-        prompt_input = st.chat_input("Ask anything about their fit...")
+        prompt_input = st.chat_input("Ask about this candidate's fit...")
         final_prompt = prompt_trigger if prompt_trigger else prompt_input
 
         if final_prompt:
             st.session_state[session_key].append({"role": "user", "content": final_prompt})
-            
+
             with chat_container:
                 with st.chat_message("user"):
                     st.markdown(final_prompt)
@@ -758,12 +835,12 @@ Here is the JSON: {json.dumps(c_data)}
 
             system_prompt = f"You are an expert technical recruiter assistant for Redrob AI. Candidate JSON: {json.dumps(c_data)}"
             api_messages = [{"role": "system", "content": system_prompt}]
-            for msg in st.session_state[session_key][-4:]: 
+            for msg in st.session_state[session_key][-4:]:
                 api_messages.append({"role": msg["role"], "content": msg["content"]})
-                
+
             response = ask_openrouter(api_messages)
             st.session_state[session_key].append({"role": "assistant", "content": response})
-            st.rerun() 
+            st.rerun()
 
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -791,43 +868,42 @@ def main():
         render_interview_page(cid, c_data)
         return
 
-    st.markdown('<div class="gradient-text">Redrob Insight: Hidden Talent Engine</div>', unsafe_allow_html=True)
-    st.markdown("<p style='color: #8b949e; font-size: 1.1rem; margin-bottom: 0.5rem;'>Finding Talent Beyond Keywords. Powered by Semantic Reasoning.</p>", unsafe_allow_html=True)
+    st.markdown('<div class="app-title">Redrob Insight</div>', unsafe_allow_html=True)
+    st.markdown('<div class="app-subtitle">Candidate discovery beyond keywords &mdash; semantic ranking with anti-stuffing, behavioral signals, and honeypot detection.</div>', unsafe_allow_html=True)
+    st.markdown("<div style='height:1.5rem;'></div>", unsafe_allow_html=True)
 
-    with st.expander("⚙️ View Engine Architecture"):
+    with st.expander("Engine architecture", expanded=False):
         st.markdown("""
-        **Pipeline Flow:**
-        `100k Resumes` ➔ `Layer 1: Hard Filter (title/keyword, word-boundary safe)`
-        ➔ `Layer 2B–F: Skills (anti-stuffing) · Career coherence · Behavioral · Location · Education`
-        ➔ `Layer 2A: Multi-aspect semantic embedding (top-4K only)`
-        ➔ `Layer 3: Honeypot detection (temporal / ghost-expert / title-mismatch)`
-        ➔ `Final Top 100`
+        **Pipeline:** `100K candidates` &rarr; `Layer 1: hard filter (word-boundary safe)` &rarr;
+        `Layer 2B-F: skills · career · behavioral · location · education` &rarr;
+        `Layer 2A: multi-aspect semantic embedding (top-4K)` &rarr;
+        `Layer 3: honeypot detection` &rarr; `Top 100`
 
-        Weights: 38% semantic · 22% skills · 20% career · 10% behavioral · 5% location · 5% education.
-        Dashboard metrics are the *actual* pipeline sub-scores persisted by `rank.py` — no fabricated values.
+        **Weights:** 38% semantic · 22% skills · 20% career · 10% behavioral · 5% location · 5% education.
+        Dashboard metrics are the *actual* sub-scores persisted by `rank.py`.
         """)
 
     with st.sidebar:
-        st.markdown("### 🏆 Discovery Leaderboard")
+        st.markdown('<div class="section-label">Discovery Leaderboard</div>')
         candidate_options = []
         for _, row in df_sub.iterrows():
             rank = row["rank"]
             cid = row["candidate_id"]
             title = candidates_data.get(cid, {}).get("profile", {}).get("current_title", "Unknown")
-            candidate_options.append(f"#{rank} - {cid} ({title[:20]}...)")
+            candidate_options.append(f"#{rank} - {cid} ({title[:22]})")
 
-        compare_mode = st.checkbox("⚖️ Compare Candidates Mode", value=False)
+        compare_mode = st.checkbox("Compare two candidates", value=False)
 
         st.markdown("---")
 
         if compare_mode:
-            cand1_str = st.selectbox("Select Candidate A", candidate_options, index=0)
-            cand2_str = st.selectbox("Select Candidate B", candidate_options, index=1 if len(candidate_options) > 1 else 0)
+            cand1_str = st.selectbox("Candidate A", candidate_options, index=0)
+            cand2_str = st.selectbox("Candidate B", candidate_options, index=1 if len(candidate_options) > 1 else 0)
         else:
-            selected_cand_str = st.selectbox("Select Candidate to Evaluate", candidate_options)
+            selected_cand_str = st.selectbox("Candidate to evaluate", candidate_options)
 
         st.markdown("---")
-        st.markdown("<div style='text-align: center; color: #8b949e; font-size: 0.8rem;'>Redrob AI Engine v2.0</div>", unsafe_allow_html=True)
+        st.markdown("<div style='text-align:center; color:#6e7681; font-size:0.75rem;'>Redrob Insight · v2.0</div>", unsafe_allow_html=True)
 
     if compare_mode:
         render_comparison_view(df_sub, candidates_data, scores_sidecar, cand1_str, cand2_str)
