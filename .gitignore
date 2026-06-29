@@ -1,0 +1,25 @@
+# Secrets — never commit
+.env
+OPENROUTER_API_KEY
+
+# Full 100K dataset (465 MB, exceeds GitHub limit) — reproduce locally from the
+# official bundle. The demo uses demo_candidates.jsonl (100 profiles) instead.
+candidates.jsonl
+candidates.jsonl.gz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Streamlit
+.streamlit/secrets.toml

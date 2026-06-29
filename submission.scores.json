@@ -1,0 +1,3459 @@
+[
+  {
+    "candidate_id": "CAND_0071974",
+    "rank": 1,
+    "final_score": 0.7684251835369573,
+    "normalized_score": 1.0,
+    "sub_scores": {
+      "semantic": 0.5318,
+      "skills": 1.0,
+      "career": 0.8293,
+      "behavioral": 0.9297,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "LoRA",
+      "BM25",
+      "Pinecone",
+      "Embeddings"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 74,
+      "recruiter_response_rate": 0.76,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 82.8
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0079387",
+    "rank": 2,
+    "final_score": 0.7016737852174628,
+    "normalized_score": 0.7403308613200764,
+    "sub_scores": {
+      "semantic": 0.483,
+      "skills": 0.722,
+      "career": 0.867,
+      "behavioral": 0.9839,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA",
+      "LoRA",
+      "BM25"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 65,
+      "recruiter_response_rate": 0.81,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 64.1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0070398",
+    "rank": 3,
+    "final_score": 0.6826057218869092,
+    "normalized_score": 0.6661543241089739,
+    "sub_scores": {
+      "semantic": 0.5121,
+      "skills": 0.7909,
+      "career": 0.8036,
+      "behavioral": 0.6582,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "BM25",
+      "FAISS"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 76,
+      "recruiter_response_rate": 0.6,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 63.1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0068811",
+    "rank": 4,
+    "final_score": 0.681778047402884,
+    "normalized_score": 0.6629345934998039,
+    "sub_scores": {
+      "semantic": 0.5174,
+      "skills": 0.6419,
+      "career": 0.8735,
+      "behavioral": 0.8577,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings",
+      "Pinecone"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 39,
+      "recruiter_response_rate": 0.42,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 23.1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0011687",
+    "rank": 5,
+    "final_score": 0.6803915142323782,
+    "normalized_score": 0.6575408506988951,
+    "sub_scores": {
+      "semantic": 0.5104,
+      "skills": 0.576,
+      "career": 0.8611,
+      "behavioral": 1.0,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 50,
+      "recruiter_response_rate": 0.89,
+      "notice_period_days": 15,
+      "open_to_work": true,
+      "github_activity_score": 76.3
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0046525",
+    "rank": 6,
+    "final_score": 0.674470313339283,
+    "normalized_score": 0.6345068293215214,
+    "sub_scores": {
+      "semantic": 0.5836,
+      "skills": 0.4257,
+      "career": 0.845,
+      "behavioral": 0.9256,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 37,
+      "recruiter_response_rate": 0.88,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 36.7
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0046064",
+    "rank": 7,
+    "final_score": 0.6738713256368692,
+    "normalized_score": 0.6321767115310118,
+    "sub_scores": {
+      "semantic": 0.5009,
+      "skills": 0.6044,
+      "career": 0.8472,
+      "behavioral": 0.9361,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Pinecone",
+      "BM25",
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 64,
+      "recruiter_response_rate": 0.78,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 67.3
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0044222",
+    "rank": 8,
+    "final_score": 0.6666603638227372,
+    "normalized_score": 0.6041254003904233,
+    "sub_scores": {
+      "semantic": 0.5109,
+      "skills": 0.6108,
+      "career": 0.8382,
+      "behavioral": 0.8301,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "BM25"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 45,
+      "recruiter_response_rate": 0.6,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 28.9
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0083307",
+    "rank": 9,
+    "final_score": 0.6661195696651513,
+    "normalized_score": 0.6020216608937414,
+    "sub_scores": {
+      "semantic": 0.5451,
+      "skills": 0.7183,
+      "career": 0.7604,
+      "behavioral": 0.7538,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings",
+      "QLoRA",
+      "Pinecone",
+      "Semantic Search"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 100,
+      "recruiter_response_rate": 0.7,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 69.2
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0041669",
+    "rank": 10,
+    "final_score": 0.6647428705226753,
+    "normalized_score": 0.5966661733751569,
+    "sub_scores": {
+      "semantic": 0.5205,
+      "skills": 0.5267,
+      "career": 0.8325,
+      "behavioral": 0.8708,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 84,
+      "recruiter_response_rate": 0.77,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 70.9
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0064326",
+    "rank": 11,
+    "final_score": 0.6640286893791412,
+    "normalized_score": 0.5938879424006487,
+    "sub_scores": {
+      "semantic": 0.5362,
+      "skills": 0.5582,
+      "career": 0.771,
+      "behavioral": 0.998,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "RAG",
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 39,
+      "recruiter_response_rate": 0.94,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 61.4
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0033861",
+    "rank": 12,
+    "final_score": 0.6613689225723286,
+    "normalized_score": 0.5835412025090175,
+    "sub_scores": {
+      "semantic": 0.5059,
+      "skills": 0.8209,
+      "career": 0.8567,
+      "behavioral": 0.2969,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "LoRA",
+      "BentoML"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 133,
+      "recruiter_response_rate": 0.16,
+      "notice_period_days": 30,
+      "open_to_work": false,
+      "github_activity_score": 32.6
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0062247",
+    "rank": 13,
+    "final_score": 0.6609735703772923,
+    "normalized_score": 0.5820032457538807,
+    "sub_scores": {
+      "semantic": 0.4934,
+      "skills": 0.6339,
+      "career": 0.7752,
+      "behavioral": 0.9147,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "BM25"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 67,
+      "recruiter_response_rate": 0.78,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 52.7
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0095619",
+    "rank": 14,
+    "final_score": 0.6588238242759826,
+    "normalized_score": 0.5736405337723913,
+    "sub_scores": {
+      "semantic": 0.5112,
+      "skills": 0.7301,
+      "career": 0.56,
+      "behavioral": 0.9446,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 74,
+      "recruiter_response_rate": 0.9,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 29.7
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0005649",
+    "rank": 15,
+    "final_score": 0.6524511141534325,
+    "normalized_score": 0.5488500995606762,
+    "sub_scores": {
+      "semantic": 0.4808,
+      "skills": 0.6195,
+      "career": 0.883,
+      "behavioral": 0.7335,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA",
+      "Semantic Search",
+      "RAG"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 76,
+      "recruiter_response_rate": 0.57,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": 80.7
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0055905",
+    "rank": 16,
+    "final_score": 0.6497423570136046,
+    "normalized_score": 0.5383127827238724,
+    "sub_scores": {
+      "semantic": 0.5534,
+      "skills": 0.5686,
+      "career": 0.8368,
+      "behavioral": 0.9201,
+      "location": 0.1,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 43,
+      "recruiter_response_rate": 0.87,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "abroad-no-reloc"
+  },
+  {
+    "candidate_id": "CAND_0006557",
+    "rank": 17,
+    "final_score": 0.6496552977310243,
+    "normalized_score": 0.5379741140294201,
+    "sub_scores": {
+      "semantic": 0.5151,
+      "skills": 0.754,
+      "career": 0.7575,
+      "behavioral": 0.6303,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 80,
+      "recruiter_response_rate": 0.63,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0070202",
+    "rank": 18,
+    "final_score": 0.6475436633566897,
+    "normalized_score": 0.5297596602053083,
+    "sub_scores": {
+      "semantic": 0.5395,
+      "skills": 0.7401,
+      "career": 0.7678,
+      "behavioral": 0.3864,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 40,
+      "recruiter_response_rate": 0.6,
+      "notice_period_days": 90,
+      "open_to_work": false,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0094759",
+    "rank": 19,
+    "final_score": 0.6442636505989484,
+    "normalized_score": 0.5170001059621864,
+    "sub_scores": {
+      "semantic": 0.5376,
+      "skills": 0.7045,
+      "career": 0.8478,
+      "behavioral": 0.3191,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "FAISS"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 172,
+      "recruiter_response_rate": 0.11,
+      "notice_period_days": 30,
+      "open_to_work": false,
+      "github_activity_score": 76.2
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0095528",
+    "rank": 20,
+    "final_score": 0.6438894967045865,
+    "normalized_score": 0.5155446125653638,
+    "sub_scores": {
+      "semantic": 0.4334,
+      "skills": 0.6793,
+      "career": 0.8168,
+      "behavioral": 0.7891,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 57,
+      "recruiter_response_rate": 0.55,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0061265",
+    "rank": 21,
+    "final_score": 0.6368478840637419,
+    "normalized_score": 0.48815208543635874,
+    "sub_scores": {
+      "semantic": 0.481,
+      "skills": 0.5124,
+      "career": 0.8379,
+      "behavioral": 0.7626,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 96,
+      "recruiter_response_rate": 0.94,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 79.8
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0055992",
+    "rank": 22,
+    "final_score": 0.6346071613083858,
+    "normalized_score": 0.4794354658216067,
+    "sub_scores": {
+      "semantic": 0.5245,
+      "skills": 0.646,
+      "career": 0.7,
+      "behavioral": 0.8068,
+      "location": 0.45,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "FAISS",
+      "RAG",
+      "Embeddings"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 93,
+      "recruiter_response_rate": 0.72,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 65.3
+    },
+    "location_label": "abroad-open-reloc"
+  },
+  {
+    "candidate_id": "CAND_0098846",
+    "rank": 23,
+    "final_score": 0.6341634438410958,
+    "normalized_score": 0.47770936366570954,
+    "sub_scores": {
+      "semantic": 0.4877,
+      "skills": 0.4679,
+      "career": 0.8224,
+      "behavioral": 0.9391,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 67,
+      "recruiter_response_rate": 0.62,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 86.2
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0028793",
+    "rank": 24,
+    "final_score": 0.6328875521962526,
+    "normalized_score": 0.4727460266749309,
+    "sub_scores": {
+      "semantic": 0.4981,
+      "skills": 0.5255,
+      "career": 0.803,
+      "behavioral": 0.7989,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings",
+      "LoRA",
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 77,
+      "recruiter_response_rate": 0.57,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 83.1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0007411",
+    "rank": 25,
+    "final_score": 0.6262000582122725,
+    "normalized_score": 0.4467310540082066,
+    "sub_scores": {
+      "semantic": 0.5101,
+      "skills": 0.6441,
+      "career": 0.8618,
+      "behavioral": 0.3079,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Pinecone"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 209,
+      "recruiter_response_rate": 0.12,
+      "notice_period_days": 15,
+      "open_to_work": false,
+      "github_activity_score": 89.5
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0086151",
+    "rank": 26,
+    "final_score": 0.6261651759908734,
+    "normalized_score": 0.44659535892744445,
+    "sub_scores": {
+      "semantic": 0.4813,
+      "skills": 0.7263,
+      "career": 0.8099,
+      "behavioral": 0.615,
+      "location": 0.75,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings",
+      "BM25",
+      "Elasticsearch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 98,
+      "recruiter_response_rate": 0.52,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 51.7
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0069905",
+    "rank": 27,
+    "final_score": 0.6210795030307376,
+    "normalized_score": 0.42681161880494606,
+    "sub_scores": {
+      "semantic": 0.54,
+      "skills": 0.5661,
+      "career": 0.7201,
+      "behavioral": 0.7381,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "LoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 69,
+      "recruiter_response_rate": 0.78,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": 44.8
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0027801",
+    "rank": 28,
+    "final_score": 0.6207069893858573,
+    "normalized_score": 0.4253625061309376,
+    "sub_scores": {
+      "semantic": 0.4309,
+      "skills": 0.6306,
+      "career": 0.7968,
+      "behavioral": 0.7538,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "FAISS"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 78,
+      "recruiter_response_rate": 0.65,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 63.3
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0018549",
+    "rank": 29,
+    "final_score": 0.6190672160094077,
+    "normalized_score": 0.4189836354104334,
+    "sub_scores": {
+      "semantic": 0.5038,
+      "skills": 0.5103,
+      "career": 0.7575,
+      "behavioral": 0.7636,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 62,
+      "recruiter_response_rate": 0.73,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 56.3
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0076251",
+    "rank": 30,
+    "final_score": 0.612384477261639,
+    "normalized_score": 0.3929871610541911,
+    "sub_scores": {
+      "semantic": 0.5021,
+      "skills": 0.5343,
+      "career": 0.8097,
+      "behavioral": 0.686,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Elasticsearch",
+      "Semantic Search"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 75,
+      "recruiter_response_rate": 0.51,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0014440",
+    "rank": 31,
+    "final_score": 0.6069993473481096,
+    "normalized_score": 0.37203850557235824,
+    "sub_scores": {
+      "semantic": 0.5074,
+      "skills": 0.3486,
+      "career": 0.7779,
+      "behavioral": 0.9442,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 50,
+      "recruiter_response_rate": 0.64,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 89.5
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0043228",
+    "rank": 32,
+    "final_score": 0.604857188412421,
+    "normalized_score": 0.3637053083697567,
+    "sub_scores": {
+      "semantic": 0.4649,
+      "skills": 0.5374,
+      "career": 0.8777,
+      "behavioral": 0.4691,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 38,
+      "recruiter_response_rate": 0.41,
+      "notice_period_days": 30,
+      "open_to_work": false,
+      "github_activity_score": 47.6
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0081852",
+    "rank": 33,
+    "final_score": 0.6005066171687228,
+    "normalized_score": 0.3467811821932594,
+    "sub_scores": {
+      "semantic": 0.4745,
+      "skills": 0.4196,
+      "career": 0.7639,
+      "behavioral": 0.9161,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "LoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 37,
+      "recruiter_response_rate": 0.44,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 87.9
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0076163",
+    "rank": 34,
+    "final_score": 0.5996246036911094,
+    "normalized_score": 0.3433500678525569,
+    "sub_scores": {
+      "semantic": 0.4813,
+      "skills": 0.5528,
+      "career": 0.6521,
+      "behavioral": 0.9118,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 50,
+      "recruiter_response_rate": 0.84,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 84.6
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0080766",
+    "rank": 35,
+    "final_score": 0.5971012362154384,
+    "normalized_score": 0.3335339340265027,
+    "sub_scores": {
+      "semantic": 0.4571,
+      "skills": 0.5201,
+      "career": 0.8913,
+      "behavioral": 0.432,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "LoRA",
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 81,
+      "recruiter_response_rate": 0.66,
+      "notice_period_days": 0,
+      "open_to_work": false,
+      "github_activity_score": 32.9
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0031593",
+    "rank": 36,
+    "final_score": 0.5935651587270158,
+    "normalized_score": 0.319778264200242,
+    "sub_scores": {
+      "semantic": 0.5123,
+      "skills": 0.4507,
+      "career": 0.8055,
+      "behavioral": 0.6515,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 102,
+      "recruiter_response_rate": 0.58,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": 23.2
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0087630",
+    "rank": 37,
+    "final_score": 0.5870173727800249,
+    "normalized_score": 0.2943067687721218,
+    "sub_scores": {
+      "semantic": 0.4693,
+      "skills": 0.6391,
+      "career": 0.7282,
+      "behavioral": 0.3897,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 105,
+      "recruiter_response_rate": 0.45,
+      "notice_period_days": 30,
+      "open_to_work": false,
+      "github_activity_score": 23.2
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0053591",
+    "rank": 38,
+    "final_score": 0.5858792827935124,
+    "normalized_score": 0.2898794930299203,
+    "sub_scores": {
+      "semantic": 0.4733,
+      "skills": 0.544,
+      "career": 0.7738,
+      "behavioral": 0.9061,
+      "location": 0.1,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings",
+      "RAG"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 43,
+      "recruiter_response_rate": 0.81,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 75.8
+    },
+    "location_label": "abroad-no-reloc"
+  },
+  {
+    "candidate_id": "CAND_0030953",
+    "rank": 39,
+    "final_score": 0.5848211003120011,
+    "normalized_score": 0.2857630649032006,
+    "sub_scores": {
+      "semantic": 0.4642,
+      "skills": 0.4946,
+      "career": 0.8843,
+      "behavioral": 0.3525,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "RAG"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 79,
+      "recruiter_response_rate": 0.63,
+      "notice_period_days": 45,
+      "open_to_work": false,
+      "github_activity_score": 21.0
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0065878",
+    "rank": 40,
+    "final_score": 0.5836317935988389,
+    "normalized_score": 0.2811365513378228,
+    "sub_scores": {
+      "semantic": 0.4901,
+      "skills": 0.408,
+      "career": 0.7995,
+      "behavioral": 0.7423,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 98,
+      "recruiter_response_rate": 0.48,
+      "notice_period_days": 15,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0017960",
+    "rank": 41,
+    "final_score": 0.5818222546080484,
+    "normalized_score": 0.27409727661136235,
+    "sub_scores": {
+      "semantic": 0.4024,
+      "skills": 0.4102,
+      "career": 0.7727,
+      "behavioral": 0.866,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 63,
+      "recruiter_response_rate": 0.72,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 92.4
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0016163",
+    "rank": 42,
+    "final_score": 0.5812987627211247,
+    "normalized_score": 0.2720608445544222,
+    "sub_scores": {
+      "semantic": 0.4698,
+      "skills": 0.3537,
+      "career": 0.7977,
+      "behavioral": 0.8192,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 79,
+      "recruiter_response_rate": 0.72,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 95.0
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0006567",
+    "rank": 43,
+    "final_score": 0.5788854234933387,
+    "normalized_score": 0.2626727308309882,
+    "sub_scores": {
+      "semantic": 0.4477,
+      "skills": 0.3008,
+      "career": 0.7871,
+      "behavioral": 0.8766,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 57,
+      "recruiter_response_rate": 0.79,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 35.2
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0099401",
+    "rank": 44,
+    "final_score": 0.5784294767206838,
+    "normalized_score": 0.2608990555414832,
+    "sub_scores": {
+      "semantic": 0.4612,
+      "skills": 0.535,
+      "career": 0.8169,
+      "behavioral": 0.3458,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Embeddings"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 33,
+      "recruiter_response_rate": 0.42,
+      "notice_period_days": 90,
+      "open_to_work": false,
+      "github_activity_score": 24.1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0083879",
+    "rank": 45,
+    "final_score": 0.577539447624286,
+    "normalized_score": 0.2574367596992972,
+    "sub_scores": {
+      "semantic": 0.4678,
+      "skills": 0.3221,
+      "career": 0.7475,
+      "behavioral": 0.8194,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 73,
+      "recruiter_response_rate": 0.47,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0072660",
+    "rank": 46,
+    "final_score": 0.5771581425865888,
+    "normalized_score": 0.2559534476907722,
+    "sub_scores": {
+      "semantic": 0.4303,
+      "skills": 0.5515,
+      "career": 0.748,
+      "behavioral": 0.8771,
+      "location": 0.1,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 36,
+      "recruiter_response_rate": 0.53,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "abroad-no-reloc"
+  },
+  {
+    "candidate_id": "CAND_0049896",
+    "rank": 47,
+    "final_score": 0.5771083018087517,
+    "normalized_score": 0.25575956243626186,
+    "sub_scores": {
+      "semantic": 0.526,
+      "skills": 0.466,
+      "career": 0.7444,
+      "behavioral": 0.6582,
+      "location": 0.75,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 43,
+      "recruiter_response_rate": 0.43,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0013536",
+    "rank": 48,
+    "final_score": 0.5738009763473931,
+    "normalized_score": 0.2428937592395316,
+    "sub_scores": {
+      "semantic": 0.4556,
+      "skills": 0.6575,
+      "career": 0.6051,
+      "behavioral": 0.7502,
+      "location": 0.75,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 62,
+      "recruiter_response_rate": 0.87,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": 51.8
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0004402",
+    "rank": 49,
+    "final_score": 0.5709955374467651,
+    "normalized_score": 0.23198034137435897,
+    "sub_scores": {
+      "semantic": 0.4264,
+      "skills": 0.3403,
+      "career": 0.7393,
+      "behavioral": 0.8872,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 35,
+      "recruiter_response_rate": 0.83,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0042100",
+    "rank": 50,
+    "final_score": 0.5701168424973514,
+    "normalized_score": 0.2285621364165457,
+    "sub_scores": {
+      "semantic": 0.4926,
+      "skills": 0.4948,
+      "career": 0.7024,
+      "behavioral": 0.7508,
+      "location": 0.45,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 98,
+      "recruiter_response_rate": 0.87,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": 43.3
+    },
+    "location_label": "abroad-open-reloc"
+  },
+  {
+    "candidate_id": "CAND_0016659",
+    "rank": 51,
+    "final_score": 0.5696123104879317,
+    "normalized_score": 0.2265994600439041,
+    "sub_scores": {
+      "semantic": 0.4431,
+      "skills": 0.364,
+      "career": 0.7119,
+      "behavioral": 0.9127,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 38,
+      "recruiter_response_rate": 0.89,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 13.4
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0070485",
+    "rank": 52,
+    "final_score": 0.5655824390779075,
+    "normalized_score": 0.21092288600386297,
+    "sub_scores": {
+      "semantic": 0.5079,
+      "skills": 0.3351,
+      "career": 0.7736,
+      "behavioral": 0.5665,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "FAISS"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 88,
+      "recruiter_response_rate": 0.45,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 26.3
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0092255",
+    "rank": 53,
+    "final_score": 0.5616851623659267,
+    "normalized_score": 0.19576211765330948,
+    "sub_scores": {
+      "semantic": 0.3871,
+      "skills": 0.4224,
+      "career": 0.7501,
+      "behavioral": 0.7414,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 53,
+      "recruiter_response_rate": 0.38,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 77.9
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0015528",
+    "rank": 54,
+    "final_score": 0.5614352231214276,
+    "normalized_score": 0.1947898307802951,
+    "sub_scores": {
+      "semantic": 0.4733,
+      "skills": 0.4426,
+      "career": 0.7841,
+      "behavioral": 0.399,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 74,
+      "recruiter_response_rate": 0.53,
+      "notice_period_days": 30,
+      "open_to_work": false,
+      "github_activity_score": 50.6
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0010685",
+    "rank": 55,
+    "final_score": 0.5603440486099251,
+    "normalized_score": 0.19054506059293302,
+    "sub_scores": {
+      "semantic": 0.4535,
+      "skills": 0.3724,
+      "career": 0.8527,
+      "behavioral": 0.7554,
+      "location": 0.75,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "Elasticsearch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 105,
+      "recruiter_response_rate": 0.83,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0091534",
+    "rank": 56,
+    "final_score": 0.5590007552796167,
+    "normalized_score": 0.18531952478608513,
+    "sub_scores": {
+      "semantic": 0.5362,
+      "skills": 0.3878,
+      "career": 0.6299,
+      "behavioral": 0.4646,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "RAG"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 55,
+      "recruiter_response_rate": 0.84,
+      "notice_period_days": 30,
+      "open_to_work": false,
+      "github_activity_score": 66.0
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0010770",
+    "rank": 57,
+    "final_score": 0.5554640179111118,
+    "normalized_score": 0.17156128796502126,
+    "sub_scores": {
+      "semantic": 0.4517,
+      "skills": 0.3394,
+      "career": 0.6799,
+      "behavioral": 0.8566,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "BM25"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 55,
+      "recruiter_response_rate": 0.73,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0061257",
+    "rank": 58,
+    "final_score": 0.5540305341329338,
+    "normalized_score": 0.16598490293995416,
+    "sub_scores": {
+      "semantic": 0.4635,
+      "skills": 0.1611,
+      "career": 0.7758,
+      "behavioral": 0.8981,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 74,
+      "recruiter_response_rate": 0.87,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 45.3
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0046353",
+    "rank": 59,
+    "final_score": 0.5484642084317252,
+    "normalized_score": 0.14433137901635656,
+    "sub_scores": {
+      "semantic": 0.3985,
+      "skills": 0.3925,
+      "career": 0.6802,
+      "behavioral": 0.7713,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 71,
+      "recruiter_response_rate": 0.73,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 76.7
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0030784",
+    "rank": 60,
+    "final_score": 0.5471787629908029,
+    "normalized_score": 0.13933087687156734,
+    "sub_scores": {
+      "semantic": 0.3679,
+      "skills": 0.395,
+      "career": 0.6949,
+      "behavioral": 0.8397,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 36,
+      "recruiter_response_rate": 0.9,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": 31.7
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0011432",
+    "rank": 61,
+    "final_score": 0.5462822730464966,
+    "normalized_score": 0.13584344773099669,
+    "sub_scores": {
+      "semantic": 0.4636,
+      "skills": 0.3647,
+      "career": 0.7931,
+      "behavioral": 0.7128,
+      "location": 0.75,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 105,
+      "recruiter_response_rate": 0.67,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 20.0
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0015582",
+    "rank": 62,
+    "final_score": 0.5443838876021851,
+    "normalized_score": 0.12845855204915016,
+    "sub_scores": {
+      "semantic": 0.4609,
+      "skills": 0.3544,
+      "career": 0.6022,
+      "behavioral": 0.8331,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 36,
+      "recruiter_response_rate": 0.82,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0092706",
+    "rank": 63,
+    "final_score": 0.5433879068351222,
+    "normalized_score": 0.12458409436832159,
+    "sub_scores": {
+      "semantic": 0.439,
+      "skills": 0.2016,
+      "career": 0.72,
+      "behavioral": 0.9071,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 33,
+      "recruiter_response_rate": 0.78,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 65.1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0025640",
+    "rank": 64,
+    "final_score": 0.5418360528725759,
+    "normalized_score": 0.11854723833299653,
+    "sub_scores": {
+      "semantic": 0.4441,
+      "skills": 0.3715,
+      "career": 0.577,
+      "behavioral": 0.8843,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 57,
+      "recruiter_response_rate": 0.87,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0005311",
+    "rank": 65,
+    "final_score": 0.5418032496679985,
+    "normalized_score": 0.11841963082074988,
+    "sub_scores": {
+      "semantic": 0.3938,
+      "skills": 0.3832,
+      "career": 0.6883,
+      "behavioral": 0.727,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "LoRA",
+      "QLoRA",
+      "NLP"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 54,
+      "recruiter_response_rate": 0.29,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 70.2
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0043860",
+    "rank": 66,
+    "final_score": 0.535829630993598,
+    "normalized_score": 0.09518169940604766,
+    "sub_scores": {
+      "semantic": 0.4371,
+      "skills": 0.2646,
+      "career": 0.6901,
+      "behavioral": 1.0,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 34,
+      "recruiter_response_rate": 0.81,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0032216",
+    "rank": 67,
+    "final_score": 0.5349500313847142,
+    "normalized_score": 0.09175997523887977,
+    "sub_scores": {
+      "semantic": 0.3649,
+      "skills": 0.4498,
+      "career": 0.6999,
+      "behavioral": 0.6984,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch",
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 66,
+      "recruiter_response_rate": 0.35,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 14.2
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0013393",
+    "rank": 68,
+    "final_score": 0.5335995219395163,
+    "normalized_score": 0.08650636807494987,
+    "sub_scores": {
+      "semantic": 0.445,
+      "skills": 0.4087,
+      "career": 0.6624,
+      "behavioral": 0.586,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 101,
+      "recruiter_response_rate": 0.33,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0019288",
+    "rank": 69,
+    "final_score": 0.5300430280306424,
+    "normalized_score": 0.0726712764770563,
+    "sub_scores": {
+      "semantic": 0.4011,
+      "skills": 0.2726,
+      "career": 0.782,
+      "behavioral": 0.7773,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "NLP"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 57,
+      "recruiter_response_rate": 0.38,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0068456",
+    "rank": 70,
+    "final_score": 0.5299164440893778,
+    "normalized_score": 0.07217885318965833,
+    "sub_scores": {
+      "semantic": 0.37,
+      "skills": 0.3605,
+      "career": 0.7568,
+      "behavioral": 0.7115,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 35,
+      "recruiter_response_rate": 0.33,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 60.7
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0024147",
+    "rank": 71,
+    "final_score": 0.5296195283809052,
+    "normalized_score": 0.07102382350907269,
+    "sub_scores": {
+      "semantic": 0.4496,
+      "skills": 0.2518,
+      "career": 0.7425,
+      "behavioral": 0.8136,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 87,
+      "recruiter_response_rate": 0.84,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 69.5
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0068932",
+    "rank": 72,
+    "final_score": 0.5290655868993487,
+    "normalized_score": 0.06886893970115021,
+    "sub_scores": {
+      "semantic": 0.4692,
+      "skills": 0.2154,
+      "career": 0.6669,
+      "behavioral": 1.0,
+      "location": 0.95,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 34,
+      "recruiter_response_rate": 0.82,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 70.5
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0010541",
+    "rank": 73,
+    "final_score": 0.5283261026181026,
+    "normalized_score": 0.06599227717103476,
+    "sub_scores": {
+      "semantic": 0.4252,
+      "skills": 0.3467,
+      "career": 0.7175,
+      "behavioral": 0.6347,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 113,
+      "recruiter_response_rate": 0.59,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 18.2
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0035879",
+    "rank": 74,
+    "final_score": 0.5269575319898823,
+    "normalized_score": 0.060668410327801285,
+    "sub_scores": {
+      "semantic": 0.4641,
+      "skills": 0.1722,
+      "career": 0.6237,
+      "behavioral": 0.9049,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 34,
+      "recruiter_response_rate": 0.82,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 84.1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0067866",
+    "rank": 75,
+    "final_score": 0.5258625575408069,
+    "normalized_score": 0.05640885803037946,
+    "sub_scores": {
+      "semantic": 0.4245,
+      "skills": 0.3021,
+      "career": 0.538,
+      "behavioral": 0.9298,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "LoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 38,
+      "recruiter_response_rate": 0.79,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 27.7
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0095457",
+    "rank": 76,
+    "final_score": 0.525584878720978,
+    "normalized_score": 0.05532866163315187,
+    "sub_scores": {
+      "semantic": 0.3665,
+      "skills": 0.4374,
+      "career": 0.7217,
+      "behavioral": 0.7576,
+      "location": 0.95,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "NLP",
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 40,
+      "recruiter_response_rate": 0.54,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0043637",
+    "rank": 77,
+    "final_score": 0.5251994973303779,
+    "normalized_score": 0.053829492233262395,
+    "sub_scores": {
+      "semantic": 0.4083,
+      "skills": 0.2442,
+      "career": 0.664,
+      "behavioral": 1.0,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch",
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 36,
+      "recruiter_response_rate": 0.92,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0070225",
+    "rank": 78,
+    "final_score": 0.5249813656830675,
+    "normalized_score": 0.05298093986729101,
+    "sub_scores": {
+      "semantic": 0.3924,
+      "skills": 0.3453,
+      "career": 0.7243,
+      "behavioral": 0.6754,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "NLP"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 53,
+      "recruiter_response_rate": 0.29,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0037160",
+    "rank": 79,
+    "final_score": 0.5244329539742525,
+    "normalized_score": 0.05084756738888413,
+    "sub_scores": {
+      "semantic": 0.4369,
+      "skills": 0.2512,
+      "career": 0.6411,
+      "behavioral": 0.7745,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 93,
+      "recruiter_response_rate": 0.74,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 28.0
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0015057",
+    "rank": 80,
+    "final_score": 0.5243622576858404,
+    "normalized_score": 0.05057255226138133,
+    "sub_scores": {
+      "semantic": 0.4178,
+      "skills": 0.2811,
+      "career": 0.6929,
+      "behavioral": 0.817,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 36,
+      "recruiter_response_rate": 0.85,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0062413",
+    "rank": 81,
+    "final_score": 0.5235542872430483,
+    "normalized_score": 0.04742947220252667,
+    "sub_scores": {
+      "semantic": 0.4075,
+      "skills": 0.3051,
+      "career": 0.7261,
+      "behavioral": 0.7286,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 84,
+      "recruiter_response_rate": 0.71,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 39.5
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0015493",
+    "rank": 82,
+    "final_score": 0.5235249367612019,
+    "normalized_score": 0.04731529610235853,
+    "sub_scores": {
+      "semantic": 0.4341,
+      "skills": 0.305,
+      "career": 0.8003,
+      "behavioral": 0.7142,
+      "location": 0.75,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "LoRA",
+      "NLP",
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 66,
+      "recruiter_response_rate": 0.3,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 65.5
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0086893",
+    "rank": 83,
+    "final_score": 0.5232472096950077,
+    "normalized_score": 0.04623491202228909,
+    "sub_scores": {
+      "semantic": 0.4593,
+      "skills": 0.2498,
+      "career": 0.555,
+      "behavioral": 0.8527,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 35,
+      "recruiter_response_rate": 0.9,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0010149",
+    "rank": 84,
+    "final_score": 0.5222605007063545,
+    "normalized_score": 0.0423965224205468,
+    "sub_scores": {
+      "semantic": 0.3663,
+      "skills": 0.3073,
+      "career": 0.6821,
+      "behavioral": 0.8155,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 35,
+      "recruiter_response_rate": 0.82,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": 18.0
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0040178",
+    "rank": 85,
+    "final_score": 0.5204650741601893,
+    "normalized_score": 0.03541214641430442,
+    "sub_scores": {
+      "semantic": 0.3977,
+      "skills": 0.2749,
+      "career": 0.8234,
+      "behavioral": 0.607,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 111,
+      "recruiter_response_rate": 0.55,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": 19.7
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0063585",
+    "rank": 86,
+    "final_score": 0.5203622394597082,
+    "normalized_score": 0.035012109879151564,
+    "sub_scores": {
+      "semantic": 0.4962,
+      "skills": 0.2319,
+      "career": 0.548,
+      "behavioral": 0.7367,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 38,
+      "recruiter_response_rate": 0.34,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 12.9
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0017590",
+    "rank": 87,
+    "final_score": 0.52026873268288,
+    "normalized_score": 0.03464835983329496,
+    "sub_scores": {
+      "semantic": 0.3883,
+      "skills": 0.408,
+      "career": 0.6958,
+      "behavioral": 0.7031,
+      "location": 0.75,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "NLP"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 88,
+      "recruiter_response_rate": 0.56,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 18.7
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0053527",
+    "rank": 88,
+    "final_score": 0.5201062875547409,
+    "normalized_score": 0.03401643319851888,
+    "sub_scores": {
+      "semantic": 0.4627,
+      "skills": 0.1977,
+      "career": 0.7358,
+      "behavioral": 0.8361,
+      "location": 0.95,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 33,
+      "recruiter_response_rate": 0.81,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0004972",
+    "rank": 89,
+    "final_score": 0.5193837203203058,
+    "normalized_score": 0.03120557955158789,
+    "sub_scores": {
+      "semantic": 0.4065,
+      "skills": 0.3515,
+      "career": 0.762,
+      "behavioral": 0.3768,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 77,
+      "recruiter_response_rate": 0.74,
+      "notice_period_days": 90,
+      "open_to_work": false,
+      "github_activity_score": 31.5
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0093763",
+    "rank": 90,
+    "final_score": 0.5189218470046877,
+    "normalized_score": 0.029408849459556796,
+    "sub_scores": {
+      "semantic": 0.3958,
+      "skills": 0.3062,
+      "career": 0.5803,
+      "behavioral": 0.8758,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 36,
+      "recruiter_response_rate": 0.92,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0066690",
+    "rank": 91,
+    "final_score": 0.5189167388647542,
+    "normalized_score": 0.029388978320821456,
+    "sub_scores": {
+      "semantic": 0.4215,
+      "skills": 0.2737,
+      "career": 0.664,
+      "behavioral": 0.9575,
+      "location": 0.95,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 33,
+      "recruiter_response_rate": 0.88,
+      "notice_period_days": 30,
+      "open_to_work": true,
+      "github_activity_score": 38.2
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0020991",
+    "rank": 92,
+    "final_score": 0.5187733294922853,
+    "normalized_score": 0.028831102543457263,
+    "sub_scores": {
+      "semantic": 0.4071,
+      "skills": 0.2649,
+      "career": 0.6525,
+      "behavioral": 0.8779,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 34,
+      "recruiter_response_rate": 0.88,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 64.7
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0011327",
+    "rank": 93,
+    "final_score": 0.518436923665552,
+    "normalized_score": 0.02752245263538168,
+    "sub_scores": {
+      "semantic": 0.4321,
+      "skills": 0.1124,
+      "career": 0.8422,
+      "behavioral": 0.9109,
+      "location": 0.95,
+      "education": 0.45
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 35,
+      "recruiter_response_rate": 0.79,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0026362",
+    "rank": 94,
+    "final_score": 0.5181907140992732,
+    "normalized_score": 0.02656467455702019,
+    "sub_scores": {
+      "semantic": 0.442,
+      "skills": 0.2151,
+      "career": 0.6475,
+      "behavioral": 0.7591,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 43,
+      "recruiter_response_rate": 0.4,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0035315",
+    "rank": 95,
+    "final_score": 0.5162914764708547,
+    "normalized_score": 0.019176463799854698,
+    "sub_scores": {
+      "semantic": 0.4275,
+      "skills": 0.3994,
+      "career": 0.6598,
+      "behavioral": 0.6152,
+      "location": 0.45,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "NLP",
+      "PyTorch"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 87,
+      "recruiter_response_rate": 0.62,
+      "notice_period_days": 120,
+      "open_to_work": true,
+      "github_activity_score": 23.6
+    },
+    "location_label": "abroad-open-reloc"
+  },
+  {
+    "candidate_id": "CAND_0018094",
+    "rank": 96,
+    "final_score": 0.5158798766237306,
+    "normalized_score": 0.0175753021691732,
+    "sub_scores": {
+      "semantic": 0.3872,
+      "skills": 0.2867,
+      "career": 0.705,
+      "behavioral": 0.6717,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "QLoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 81,
+      "recruiter_response_rate": 0.69,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 10.7
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0033649",
+    "rank": 97,
+    "final_score": 0.5147782282420903,
+    "normalized_score": 0.01328978765426422,
+    "sub_scores": {
+      "semantic": 0.3684,
+      "skills": 0.287,
+      "career": 0.7433,
+      "behavioral": 0.7549,
+      "location": 0.75,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [
+      "PyTorch",
+      "QLoRA",
+      "LoRA"
+    ],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 112,
+      "recruiter_response_rate": 0.77,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "indian-metro"
+  },
+  {
+    "candidate_id": "CAND_0098952",
+    "rank": 98,
+    "final_score": 0.5145106618073381,
+    "normalized_score": 0.01224892937412421,
+    "sub_scores": {
+      "semantic": 0.4397,
+      "skills": 0.312,
+      "career": 0.6187,
+      "behavioral": 0.7156,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 116,
+      "recruiter_response_rate": 0.66,
+      "notice_period_days": 45,
+      "open_to_work": true,
+      "github_activity_score": 47.2
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0098780",
+    "rank": 99,
+    "final_score": 0.514308188056642,
+    "normalized_score": 0.011461287680134706,
+    "sub_scores": {
+      "semantic": 0.3493,
+      "skills": 0.3652,
+      "career": 0.655,
+      "behavioral": 0.7273,
+      "location": 0.95,
+      "education": 1.0
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 72,
+      "recruiter_response_rate": 0.57,
+      "notice_period_days": 60,
+      "open_to_work": true,
+      "github_activity_score": -1
+    },
+    "location_label": "tier1-city"
+  },
+  {
+    "candidate_id": "CAND_0010603",
+    "rank": 100,
+    "final_score": 0.5139325446648554,
+    "normalized_score": 0.01,
+    "sub_scores": {
+      "semantic": 0.4374,
+      "skills": 0.1581,
+      "career": 0.6825,
+      "behavioral": 0.9296,
+      "location": 0.95,
+      "education": 0.72
+    },
+    "weights": {
+      "semantic": 0.38,
+      "skills": 0.22,
+      "career": 0.2,
+      "behavioral": 0.1,
+      "location": 0.05,
+      "education": 0.05
+    },
+    "honeypot_mult": 1.0,
+    "verified_skills": [],
+    "is_product_company": true,
+    "behavioral_summary": {
+      "days_since_active": 37,
+      "recruiter_response_rate": 0.94,
+      "notice_period_days": 90,
+      "open_to_work": true,
+      "github_activity_score": 78.9
+    },
+    "location_label": "tier1-city"
+  }
+]

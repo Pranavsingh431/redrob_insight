@@ -1,0 +1,87 @@
+# Redrob Hackathon — Submission Metadata
+# Mirrors the portal metadata submitted at upload time.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Enumerators"
+
+primary_contact:
+  name: "Pranav Singh"
+  email: "singhpranav431@gmail.com"
+  phone: "+91-9317642984"
+
+team_members:
+  - name: "Pranav Singh"
+    email: "singhpranav431@gmail.com"
+    role: "Solo — ML / Backend / Demo"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Pranavsingh431/redrob_insight"
+
+sandbox_link: "https://redrob-insight.streamlit.app"
+# Streamlit Cloud deployment — repo: Pranavsingh431/redrob_insight, main branch,
+# entry file streamlit_demo.py.
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+# Runs end-to-end in ~3.5 minutes on a 16 GB CPU-only machine with no network.
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "MacBook (Apple Silicon)"
+  cpu_cores: 8
+  ram_gb: 8
+  python_version: "3.11"
+  os: "macOS"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"                   # architecture discussion, code review
+  - "Gemini (OpenRouter)"      # demo co-pilot / mock-interviewer (network OK in streamlit_demo.py only)
+
+ai_usage_summary: |
+  Used Claude for architecture discussion, code review, and refactoring.
+  Used Gemini via OpenRouter ONLY inside streamlit_demo.py for the recruiter
+  co-pilot and mock-interviewer features (network is permitted for the demo;
+  the ranker itself makes zero network calls). No candidate data was fed to any
+  external LLM. Ranking is 100% local CPU computation.
+
+# ============================================================================
+# Approach summary (<=200 words)
+# ============================================================================
+methodology_summary: |
+  Cascading 5-layer ranker optimised for the 0.50*NDCG@10 + 0.30*NDCG@50 +
+  0.15*MAP + 0.05*P@10 metric. Layer 1 is a word-boundary-safe keyword/title
+  screen (avoids 'rag' matching 'storage'). Layers 2B-2F compute six grounded
+  sub-scores — skills (anti-keyword-stuffing, 0.65x penalty for unverified
+  skills), career coherence (title used as a hard MULTIPLIER so non-technical
+  titles cap at 12%, catching the Marketing-Manager-with-AI-keywords trap),
+  behavioral availability (recency decay + open_to_work multiplier), location,
+  and pre-labeled education tier. Only the top 4K by L2 composite are embedded
+  (multi-aspect sentence-transformers MiniLM, 3 weighted JD queries, fully
+  offline), keeping runtime under 4 min on CPU. Layer 3 honeypot detection
+  catches temporal impossibility (incl. job duration vs calendar time),
+  expert-without-evidence, and title-skills mismatch; 2+ flags force a 0.0
+  multiplier so honeypots cannot enter the top 100. Reasoning strings are built
+  entirely from real profile fields and append honest 'concerns' clauses where
+  availability/notice/experience is weak.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
