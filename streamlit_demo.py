@@ -539,7 +539,7 @@ def render_comparison_view(df_sub, candidates_data, scores_sidecar, cand1_str, c
         return sum(ARCH_WEIGHTS[k] * (v / 100.0) for k, v in zip(order, vals))
     w1, w2 = weighted(metrics1), weighted(metrics2)
     st.markdown("---")
-    st.markdown('<div class="section-label">Recommendation</div>')
+    st.markdown('<div class="section-label">Recommendation</div>', unsafe_allow_html=True)
     if w1 >= w2:
         st.info(f"**{cid1}** (Rank #{rank1}) has the higher weighted composite ({w1:.3f} vs {w2:.3f}).")
     else:
@@ -668,7 +668,7 @@ def render_dashboard(df_sub, candidates_data, scores_sidecar, selected_cand_str)
     # ── Sidebar Actions ──
     with st.sidebar:
         st.markdown("---")
-        st.markdown('<div class="section-label">Recruiter Actions</div>')
+        st.markdown('<div class="section-label">Recruiter Actions</div>', unsafe_allow_html=True)
         candidate_email = profile.get("email", f"{selected_cid.lower()}@example.com")
 
         shortlist_subject = urllib.parse.quote("Update on your application at Redrob")
@@ -691,7 +691,7 @@ def render_dashboard(df_sub, candidates_data, scores_sidecar, selected_cand_str)
     ats_fail_bullets = _build_ats_failure_reasons(c_data, title, skills, history, metric_vals)
 
     # ── Explainability Header: The "Why" ──
-    st.markdown('<div class="section-label">Explainability</div>')
+    st.markdown('<div class="section-label">Explainability</div>', unsafe_allow_html=True)
     colA, colB = st.columns([1, 2])
 
     with colA:
@@ -722,7 +722,7 @@ def render_dashboard(df_sub, candidates_data, scores_sidecar, selected_cand_str)
 
     with col_left:
         # Career timeline
-        st.markdown('<div class="card-title">Career timeline</div>')
+        st.markdown('<div class="card-title">Career timeline</div>', unsafe_allow_html=True)
         st.markdown('<div class="card">', unsafe_allow_html=True)
 
         if not history:
@@ -741,7 +741,7 @@ def render_dashboard(df_sub, candidates_data, scores_sidecar, selected_cand_str)
         st.markdown('</div>', unsafe_allow_html=True)
 
         # Score breakdown bars
-        st.markdown('<div class="card-title">Score breakdown</div>')
+        st.markdown('<div class="card-title">Score breakdown</div>', unsafe_allow_html=True)
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown(_render_score_bars_html(metrics), unsafe_allow_html=True)
         if score_entry:
@@ -754,7 +754,7 @@ def render_dashboard(df_sub, candidates_data, scores_sidecar, selected_cand_str)
         st.markdown('</div>', unsafe_allow_html=True)
 
         # Skills
-        st.markdown('<div class="card-title">Declared skills</div>')
+        st.markdown('<div class="card-title">Declared skills</div>', unsafe_allow_html=True)
         st.markdown('<div class="card">', unsafe_allow_html=True)
         if skills:
             tags_html = "".join(
@@ -767,7 +767,7 @@ def render_dashboard(df_sub, candidates_data, scores_sidecar, selected_cand_str)
         st.markdown('</div>', unsafe_allow_html=True)
 
     with col_right:
-        st.markdown('<div class="card-title">Recruiter co-pilot</div>')
+        st.markdown('<div class="card-title">Recruiter co-pilot</div>', unsafe_allow_html=True)
         st.markdown('<div class="card" style="padding-bottom:0.5rem;">', unsafe_allow_html=True)
 
         session_key = f"messages_{selected_cid}"
@@ -884,7 +884,7 @@ def main():
         """)
 
     with st.sidebar:
-        st.markdown('<div class="section-label">Discovery Leaderboard</div>')
+        st.markdown('<div class="section-label">Discovery Leaderboard</div>', unsafe_allow_html=True)
         candidate_options = []
         for _, row in df_sub.iterrows():
             rank = row["rank"]
