@@ -21,9 +21,7 @@ team_members:
 # ============================================================================
 github_repo: "https://github.com/Pranavsingh431/redrob_insight"
 
-sandbox_link: "https://redrob-insight.streamlit.app"
-# Streamlit Cloud deployment — repo: Pranavsingh431/redrob_insight, main branch,
-# entry file streamlit_demo.py.
+sandbox_link: "https://redrobinsight-fxmftaqqgmd2brczbwfgif.streamlit.app"
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 # Runs end-to-end in ~3.5 minutes on a 16 GB CPU-only machine with no network.
